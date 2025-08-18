@@ -1,4 +1,4 @@
-module github.com/tdakkota/asciicheck
+module github.com/golangci/asciicheck
 
 go 1.23.0
 

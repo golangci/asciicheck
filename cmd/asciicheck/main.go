@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/tdakkota/asciicheck"
+	"github.com/golangci/asciicheck"
 	"golang.org/x/tools/go/analysis/singlechecker"
 )
 
