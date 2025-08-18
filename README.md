@@ -4,6 +4,8 @@
 
 Simple linter to check that your code does not contain non-ASCII identifiers
 
+The project has been moved to the golangci organization because the GitHub account of the original author (@tdakkota) is no longer available.
+
 ## Install
   
 ```bash
