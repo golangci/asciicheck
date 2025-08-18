@@ -42,18 +42,17 @@ func BenchmarkIsASCII(b *testing.B) {
 	for _, size := range sizes {
 		b.Run(fmt.Sprintf("Len=%d", size), func(b *testing.B) {
 			s := generateString(size)
+
 			b.ReportAllocs()
 			b.ResetTimer()
 
-			for i := 0; i < b.N; i++ {
+			for range b.N {
 				if _, ok := isASCII(s); !ok {
 					b.Fatal("unexpected result")
 				}
 			}
 		})
-
 	}
-
 }
 
 func generateString(l int) string {
@@ -61,5 +60,6 @@ func generateString(l int) string {
 	for i := range s {
 		s[i] = byte(i)
 	}
+
 	return string(s)
 }
