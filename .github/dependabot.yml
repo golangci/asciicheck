@@ -5,18 +5,22 @@
 
 version: 2
 updates:
-  - package-ecosystem: "gomod"
-    directory: "/" # Location of package manifests
+  - package-ecosystem: gomod
+    directory: "/"
     schedule:
       interval: monthly
     groups:
-      scripts:
+      go:
         patterns:
           - "*"  # Group all updates into a single larger pull request.
+    cooldown:
+      default-days: 7
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: monthly
+    cooldown:
+      default-days: 7
     groups:
       github-actions:
         patterns:
