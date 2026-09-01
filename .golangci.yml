@@ -6,7 +6,10 @@ formatters:
     - gofumpt
   settings:
     gofumpt:
-      extra-rules: true
+      extra:
+        group-params: true
+        clothe-returns: true
+
 
 linters:
   default: all
@@ -16,8 +19,10 @@ linters:
     - errchkjson
     - exhaustive
     - exhaustruct
+    - exhaustruct_v5
     - lll
     - mnd
+    - gomodguard
     - nilnil
     - nlreturn
     - nonamedreturns
